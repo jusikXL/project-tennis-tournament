@@ -20,6 +20,9 @@ public:
     Player(string firstName, string lastName, uint totalWins, uint totalLosses,
            string country, int dateOfBirth, string id = "");
 
+    uint updateTotalWins(uint totalWins);
+    uint updateTotalLosses(uint totalLosses);
+
     // getters
     string getId() const;
     uint getTotalWins() const;

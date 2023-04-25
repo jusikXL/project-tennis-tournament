@@ -22,4 +22,5 @@ public:
     string getLocation();
     string getName();
     uint getCapacity();
+    string getId();
 };
