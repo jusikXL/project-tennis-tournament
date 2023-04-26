@@ -19,8 +19,8 @@ public:
     void setName(string name);
     void setCapacity(uint capacity);
     // getters
-    string getLocation();
-    string getName();
-    uint getCapacity();
-    string getId();
+    string getLocation() const;
+    string getName() const;
+    uint getCapacity() const;
+    string getId() const;
 };

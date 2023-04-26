@@ -10,8 +10,8 @@ class CourtList
 {
 private:
     vector<Court> courts;
-    void mintCourt(string location, string name, uint capacity);
 
 public:
+    void mintCourt(string location, string name, uint capacity);
     const Court &getCourtById(string courtId) const;
 };
