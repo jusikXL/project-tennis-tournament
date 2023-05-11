@@ -3,6 +3,8 @@
 #include <cassert>
 #include <iostream>
 
+using namespace std;
+
 void constructorTest()
 {
     Court c("New York", "Madison Square Garden", 20000);
@@ -37,7 +39,11 @@ void printTest()
 
 void CourtTests()
 {
+    cout << "\n --- Court Tests start --- \n"
+         << endl;
     constructorTest();
     settersAndGettersTest();
     printTest();
+    cout << "\n --- Court Tests end --- \n"
+         << endl;
 }

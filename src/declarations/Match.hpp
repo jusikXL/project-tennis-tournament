@@ -21,13 +21,13 @@ private:
     string court;
     bool winner;
     string players[2];
-    struct ScoreNode
-    {
-        uint firstPlayerScore;
-        uint secondPlayerScore;
-        ScoreNode *next;
-    };
-    ScoreNode *scoreHead;
+    // struct ScoreNode
+    // {
+    //     uint firstPlayerScore;
+    //     uint secondPlayerScore;
+    //     ScoreNode *next;
+    // };
+    // ScoreNode *scoreHead;
 
     void _produceId();
 
@@ -40,11 +40,11 @@ public:
     uint getDate() const;
     string getCourt() const;
     bool getWinner() const;
-    ScoreNode *getScore() const;
+    // ScoreNode *getScore() const;
 
     // other methods
     void determineWinner();
-    void updateScore(uint score, bool player);
-    void printScore();
+    // void updateScore(uint score, bool player);
+    // void printScore();
     void printDetails();
 };

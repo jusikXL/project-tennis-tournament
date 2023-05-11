@@ -12,6 +12,7 @@ private:
     vector<Court> courts;
 
 public:
-    void mintCourt(string location, string name, uint capacity);
-    const Court &getCourtById(string courtId) const;
+    string addCourt(string location, string name, uint capacity);
+    Court &getCourtById(string courtId);
+    void printCourts();
 };

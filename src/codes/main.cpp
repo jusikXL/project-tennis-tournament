@@ -1,6 +1,6 @@
 #include <iostream>
 #include "../declarations/CourtTest.hpp"
-#include "../declarations/MatchTest.hpp"
+#include "../declarations/CourtListTest.hpp"
 using namespace std;
 
 int main()
@@ -8,6 +8,6 @@ int main()
     // Your code here
     cout << "Main seems to work..." << endl;
     CourtTests();
-    MatchTests();
+    CourtListTests();
     return 0;
 }
