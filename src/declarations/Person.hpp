@@ -8,7 +8,7 @@ class Person
 protected:
     string firstName;
     string lastName;
-    int dateOfBirth;
+    time_t dateOfBirth;
     uint age;
     string country;
 
@@ -20,7 +20,7 @@ public:
     // Getters
     string getFirstName() const;
     string getLastName() const;
-    int getDateOfBirth() const;
+    time_t getDateOfBirth() const;
     uint getAge() const;
     string getCountry() const;
 };
