@@ -13,7 +13,7 @@ private:
     void _produceId();
 
 public:
-    Court(string location, string name, uint capacity, string id = "");
+    Court(string location, string name, uint capacity);
     // setters
     void setLocation(string location);
     void setName(string name);
@@ -23,4 +23,6 @@ public:
     string getName() const;
     uint getCapacity() const;
     string getId() const;
+    // other
+    void printDetails();
 };

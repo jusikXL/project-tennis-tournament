@@ -1,13 +1,15 @@
 #include "../headers/Court.hpp"
+#include "../headers/CourtTest.hpp"
 #include <cassert>
+#include <iostream>
 
 void ConstructorTest()
 {
-    Court c("New York", "Madison Square Garden", 20000, "MSG");
+    Court c("New York", "Madison Square Garden", 20000);
     assert(c.getLocation() == "New York");
     assert(c.getName() == "Madison Square Garden");
     assert(c.getCapacity() == 20000);
-    assert(c.getId() == "MSG");
+    // assert(c.getId() == "MSG");
 }
 
 void SettersAndGettersTest()
@@ -16,7 +18,7 @@ void SettersAndGettersTest()
     assert(c.getLocation() == "Los Angeles");
     assert(c.getName() == "Staples Center");
     assert(c.getCapacity() == 18000);
-    assert(c.getId() == "");
+    cout << c.getId() << endl;
 
     c.setLocation("Chicago");
     assert(c.getLocation() == "Chicago");
@@ -26,11 +28,4 @@ void SettersAndGettersTest()
 
     c.setCapacity(22000);
     assert(c.getCapacity() == 22000);
-}
-
-int main()
-{
-    ConstructorTest();
-    SettersAndGettersTest();
-    return 0;
 }
