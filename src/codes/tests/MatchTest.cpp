@@ -1,4 +1,5 @@
-#include "Match.hpp"
+#include "../../declarations/Match.hpp"
+#include "../../declarations/MatchTest.hpp"
 #include <cassert>
 #include <sstream>
 
@@ -40,13 +41,6 @@ void test_determine_winner()
     assert(m2.getWinner() == false);
 }
 
-int main()
+void MatchTests()
 {
-    test_constructor();
-    test_update_score();
-    test_determine_winner();
-
-    std::cout << "All tests passed!\n";
-
-    return 0;
 }

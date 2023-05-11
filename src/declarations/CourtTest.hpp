@@ -1,4 +1,3 @@
 #pragma once
 
-void ConstructorTest();
-void SettersAndGettersTest();
+void CourtTests();

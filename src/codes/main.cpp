@@ -1,12 +1,13 @@
 #include <iostream>
-#include "../headers/CourtTest.hpp"
+#include "../declarations/CourtTest.hpp"
+#include "../declarations/MatchTest.hpp"
 using namespace std;
 
 int main()
 {
     // Your code here
     cout << "Main seems to work..." << endl;
-    ConstructorTest();
-    SettersAndGettersTest();
+    CourtTests();
+    MatchTests();
     return 0;
 }

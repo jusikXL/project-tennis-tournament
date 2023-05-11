@@ -1,16 +1,22 @@
-#include "../headers/Court.hpp"
+#include "../../declarations/Court.hpp"
 #include <iostream>
 #include <random>
 #include <sstream>
+#include <iomanip>
+#include <functional>
+
+using namespace std;
 
 void Court::_produceId()
 {
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<> dis(1000, 9999);
+    string combined = location + name + to_string(capacity);
+    hash<string> hasher;
+    size_t hash = hasher(combined);
+    hash %= 10000; // to limit to 4 digits
 
-    std::stringstream ss;
-    ss << "C-" << location[0] << name[0] << "-" << dis(gen);
+    stringstream ss;
+    ss << "#CR-" << setfill('0') << setw(4) << hash;
+    // will be filled with 0 if fewer than 4 digits
     id = ss.str();
 }
 
@@ -60,9 +66,11 @@ string Court::getId() const
 // other
 void Court::printDetails()
 {
-    cout << "Court Details:" << endl;
-    cout << "ID: " << id << endl;
-    cout << "Location: " << location << endl;
-    cout << "Name: " << name << endl;
-    cout << "Capacity: " << capacity << endl;
+    stringstream ss;
+    ss << "Court Details:\n"
+       << "ID: " << id << "\n"
+       << "Location: " << location << "\n"
+       << "Name: " << name << "\n"
+       << "Capacity: " << capacity << "\n";
+    cout << ss.str();
 }
