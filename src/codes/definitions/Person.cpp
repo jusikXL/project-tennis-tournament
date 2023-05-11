@@ -1,4 +1,4 @@
-#include "Person.hpp"
+#include "../../declarations/Person.hpp"
 #include <ctime>
 
 void Person::_determineAge()
@@ -7,7 +7,7 @@ void Person::_determineAge()
     int currentYear = localtime(&now)->tm_year + 1900;
     int birthYear = localtime(&dateOfBirth)->tm_year + 1900;
     age = currentYear - birthYear;
-}
+} // works incorrectly
 
 void Person::printInfo()
 {
